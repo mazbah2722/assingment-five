@@ -14,7 +14,7 @@ document.getElementById('donate-btn').addEventListener('click', function(event){
    }
    const newBalance = balance + addMoney;
    document.getElementById('initial-value').innerText = newBalance;
-//    
+//   my balance subtraction 
    const myBalance = document.getElementById('myBalance').innerText;
    const myBalanceConvert = parseFloat(myBalance);
    const newMyBalance = myBalanceConvert - newBalance;
@@ -22,7 +22,7 @@ document.getElementById('donate-btn').addEventListener('click', function(event){
 
 
   
-   console.log(addMoney, balance, newBalance);
+   
    alert('successfully');
 
 })
@@ -36,7 +36,13 @@ document.getElementById('donate2-btn').addEventListener('click', function(event)
    }
    const newBalance = balance + addMoney2;
    document.getElementById('initial-value2').innerText = newBalance;
-   console.log( addMoney2);
+
+   //   my balance subtraction 
+   const myBalance = document.getElementById('myBalance').innerText;
+   const myBalanceConvert = parseFloat(myBalance);
+   const newMyBalance = myBalanceConvert - newBalance;
+   document.getElementById('myBalance').innerText = newMyBalance;
+   
    alert('successfully');
 
 })
@@ -50,7 +56,31 @@ document.getElementById('quota-protest-btn').addEventListener('click', function(
    }
    const newBalance = balance + addMoney3;
    document.getElementById('initial-value3').innerText = newBalance;
-   console.log( addMoney3);
+
+   //   my balance subtraction 
+   const myBalance = document.getElementById('myBalance').innerText;
+   const myBalanceConvert = parseFloat(myBalance);
+   const newMyBalance = myBalanceConvert - newBalance;
+   document.getElementById('myBalance').innerText = newMyBalance;
+
    alert('successfully');
 
+})
+
+// ---------------
+document.getElementById('history').addEventListener('click', function(){
+    
+    document.getElementById('history-btn').classList.remove('hidden');
+    document.getElementById('donation-btn').classList.add('hidden');
+    
+    document.getElementById('donation').classList.remove('bg-[#B4F461]');
+    document.getElementById('history').classList.add('bg-[#B4F461]');
+})
+document.getElementById('donation').addEventListener('click', function(){
+   
+    document.getElementById('history-btn').classList.add('hidden');
+    document.getElementById('donation-btn').classList.remove('hidden');
+    document.getElementById('donation').classList.add('bg-[#B4F461]');
+    document.getElementById('history').classList.remove('bg-[#B4F461]');
+    
 })

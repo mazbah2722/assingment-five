@@ -39,15 +39,15 @@
                 </div>
             </div>
             <div class="flex items-center justify-center gap-4 pb-10 font-semibold mt-10 ">
-                <button class="btn bg-[#B4F461] text-xl">Donation</button>
-                <button class="btn text-xl">History</button>
+                <button id="donation" class="btn bg-[#B4F461] text-xl">Donation</button>
+                <button id="history" class="btn text-xl">History</button>
 
             </div>
         </div>
     </div>
    </header>
     <main class=" md:w-9/12 mx-auto mt-10 ">
-        <div class="space-y-4 absolute top-[250px] right-36 left-36 z-0">
+        <div id="donation-btn" class=" space-y-4 absolute top-[250px] right-36 left-36 z-0">
             
             <!-- card 1 -->
             <section class="mb-16 border rounded-xl">
@@ -91,9 +91,15 @@
             </section>
            
         </div>
+        <!-- history--------- -->
+        <div id="history-btn" class="hidden absolute top-[250px] right-36 left-36 z-0">
+            <h1 class="text-center">History</h1>
+            <p id="p-tag"></p>
+        </div>
     </main>
 <script src="./js//shared.js"></script>
 <script src="./js//money.js"></script>
+<script src="./js//feature.js"></script>
 </body>
 
 </html>
