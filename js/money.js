@@ -1,15 +1,12 @@
 document.getElementById('donate-btn').addEventListener('click', function (event) {
     event.preventDefault();
-    // const initialValue= document.getElementById('initial-value').innerText;
-    // const initialValueConvert = parseFloat(initialValue);
-    // console.log(initialValueConvert)
 
     const addMoney = getInputFieldValueById('donate-input');
     const balance = getTextfieldValueById('initial-value');
 
 
-    if (isNaN(addMoney)) {
-        alert('Failed');
+    if (addMoney <= 0  || isNaN(addMoney)) {
+        alert('Invalid Donation Amount');
         return 0;
     }
     const newBalance = balance + addMoney;
@@ -26,15 +23,15 @@ document.getElementById('donate-btn').addEventListener('click', function (event)
     document.getElementById('history-container').appendChild(p);
 
 
-    alert('successfully');
+    alert('successful donation');
 
 })
 document.getElementById('donate2-btn').addEventListener('click', function (event) {
     event.preventDefault();
     const addMoney2 = getInputFieldValueById('feni-input');
     const balance = getTextfieldValueById('initial-value2');
-    if (isNaN(addMoney2)) {
-        alert('Failed');
+    if (addMoney2 <= 0  ||  isNaN(addMoney2)) {
+        alert('Invalid Donation Amount');
         return 0;
     }
     const newBalance = balance + addMoney2;
@@ -53,15 +50,15 @@ document.getElementById('donate2-btn').addEventListener('click', function (event
 
 
 
-    alert('successfully');
+    alert('successful donation');
 
 })
 document.getElementById('quota-protest-btn').addEventListener('click', function (event) {
     event.preventDefault();
     const addMoney3 = getInputFieldValueById('quota-protest-input');
     const balance = getTextfieldValueById('initial-value3');
-    if (isNaN(addMoney3)) {
-        alert('Failed');
+    if (addMoney3 <= 0  ||  isNaN(addMoney3)) {
+        alert('Invalid Donation Amount');
         return 0;
     }
     const newBalance = balance + addMoney3;
@@ -77,7 +74,7 @@ document.getElementById('quota-protest-btn').addEventListener('click', function 
     const newMyBalance = myBalanceConvert - newBalance;
     document.getElementById('myBalance').innerText = newMyBalance;
 
-    alert('successfully');
+    alert('successful donation');
 
 })
 
